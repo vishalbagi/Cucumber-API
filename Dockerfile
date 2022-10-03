@@ -1,6 +1,6 @@
 FROM maven:3.6-jdk-8-slim
 RUN apt-get -y update
-RUN apt-get -y install git
+RUN apt-get -y install unzip
 #RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN mvn -version
 
