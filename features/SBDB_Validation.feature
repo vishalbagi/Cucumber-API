@@ -1,10 +1,9 @@
-#Author: Vamsi Darbhamulla
 Feature: Validate SBDB Close-Approach Data API- (https://ssd-api.jpl.nasa.gov/cad.api?)
 
   Background: Endpoint Configuration 
     Given The endpoint is already configured
 
-  @user1 @positive
+  @SBDB @positive
   Scenario: Enter a valid userId
     When I close-approach data for asteroid with following filter
       | key     | value    |

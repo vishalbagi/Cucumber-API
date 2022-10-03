@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         features = "features",
-        glue = {"com.sbdb.stepdef"},
+        glue = {"com.sbdb.stepdef"},tags = {"@SBDB"},
         plugin = { "com.sbdb.CucumberEventListener",
                 "html:target/cucumberHtmlReport",
                 "json:target/cucumber-report.json" }

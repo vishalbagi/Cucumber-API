@@ -3,4 +3,4 @@ RUN mvn -version
 RUN git clone https://github.com/vishalbagi/Cucumber-API.git
 CMD ls
 CMD ls
-RUN cd Cucumber-API && mvn test
+RUN cd Cucumber-API && mvn clean verify -Dcucumber.options="--tags @SBDB"
