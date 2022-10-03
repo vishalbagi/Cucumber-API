@@ -11,8 +11,4 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Build docker images
-      run: docker-compose build
-    - name: Setup database
-      run: docker-compose run setup
-    - name: Run tests
-      run: docker-compose run test
+      run: docker build -t foo . && docker run -it foo
