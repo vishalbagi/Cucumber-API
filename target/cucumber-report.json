@@ -1,0 +1,177 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Endpoint Configuration",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 125731699,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The endpoint is already configured",
+            "match": {
+              "location": "AproachDataValidationSteps.the_endpoint_is_already_configured()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-10-03T22:06:53.533Z",
+        "line": 8,
+        "name": "Enter a valid userId",
+        "description": "",
+        "id": "validate-sbdb-close-approach-data-api--(https://ssd-api.jpl.nasa.gov/cad.api?);enter-a-valid-userid",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2124436300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I close-approach data for asteroid with following filter",
+            "match": {
+              "location": "AproachDataValidationSteps.i_closeapproach_data_for_asteroid_with_following_filter(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "des",
+                  "433"
+                ]
+              },
+              {
+                "cells": [
+                  "date-min",
+                  "1900-01-01"
+                ]
+              },
+              {
+                "cells": [
+                  "date-max",
+                  "2100-01-01"
+                ]
+              },
+              {
+                "cells": [
+                  "dist-max",
+                  "0.2"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41106700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I should have the status code \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "AproachDataValidationSteps.i_should_have_the_status_code(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1716839600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "content type should be in \"JSON\" format",
+            "match": {
+              "arguments": [
+                {
+                  "val": "JSON",
+                  "offset": 27
+                }
+              ],
+              "location": "AproachDataValidationSteps.content_type_should_be_in_format(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 524538500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the body response content should be matched",
+            "match": {
+              "location": "AproachDataValidationSteps.the_body_response_content_should_be_matched(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "key",
+                  "value"
+                ]
+              },
+              {
+                "cells": [
+                  "count",
+                  "5"
+                ]
+              },
+              {
+                "cells": [
+                  "signature.source",
+                  "NASA/JPL SBDB Close Approach Data API"
+                ]
+              },
+              {
+                "cells": [
+                  "signature.version",
+                  "1.4"
+                ]
+              },
+              {
+                "cells": [
+                  "data[0][0]",
+                  "433"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user1"
+          },
+          {
+            "name": "@positive"
+          }
+        ]
+      }
+    ],
+    "name": "Validate SBDB Close-Approach Data API- (https://ssd-api.jpl.nasa.gov/cad.api?)",
+    "description": "",
+    "id": "validate-sbdb-close-approach-data-api--(https://ssd-api.jpl.nasa.gov/cad.api?)",
+    "keyword": "Feature",
+    "uri": "file:features/SBDB_Validation.feature",
+    "tags": []
+  }
+]

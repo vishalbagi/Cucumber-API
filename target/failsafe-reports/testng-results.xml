@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="5546" started-at="2022-10-03T22:06:52Z" finished-at="2022-10-03T22:06:58Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestNgCucumberScenarioRunner.feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.sbdb.TestNgCucumberScenarioRunner@7946e1f4]" name="feature" class="com.sbdb.TestNgCucumberScenarioRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Surefire test" duration-ms="5546" started-at="2022-10-03T22:06:52Z" finished-at="2022-10-03T22:06:58Z">
+      <class name="com.sbdb.TestNgCucumberScenarioRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.sbdb.TestNgCucumberScenarioRunner@7946e1f4]" name="setUpClass" is-config="true" duration-ms="227" started-at="2022-10-03T22:06:52Z" finished-at="2022-10-03T22:06:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:com.sbdb.TestNgCucumberScenarioRunner@7946e1f4]" name="feature" duration-ms="4693" started-at="2022-10-03T22:06:53Z" description="Runs Cucumber Feature" data-provider="scenarios" finished-at="2022-10-03T22:06:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enter a valid userId"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Validate SBDB Close-Approach Data API- (https://ssd-api.jpl.nasa.gov/cad.api?)"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.sbdb.TestNgCucumberScenarioRunner@7946e1f4]" name="tearDownClass" is-config="true" duration-ms="61" started-at="2022-10-03T22:06:58Z" finished-at="2022-10-03T22:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.sbdb.TestNgCucumberScenarioRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

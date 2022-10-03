@@ -1,0 +1,41 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Root",
+  "type": "object",
+  "required": [
+    "signature",
+    "count",
+    "fields",
+    "data"
+  ],
+  "properties": {
+    "count": {
+      "$id": "#root/count",
+      "title": "count",
+      "type": "string"
+    },
+    "signature": {
+      "$id": "#root/signature",
+      "title": "signature",
+      "type": "object",
+      "required": [
+        "source",
+        "version"
+      ],
+      "properties": {
+        "street": {
+          "$id": "#root/signature/source",
+          "title": "source",
+          "type": "string",
+          "default": "",
+          "examples": [
+            "NASA/JPL SBDB Close Approach Data AP"
+          ],
+          "pattern": "^.*$"
+        }
+      }
+    }
+
+  }
+}
