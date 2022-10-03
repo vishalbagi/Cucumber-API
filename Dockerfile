@@ -3,7 +3,7 @@ RUN apt-get -y update
 RUN apt-get -y install git
 #RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN mvn -version
-ARG MVND_DOWNLOAD_URL=https://api.github.com/vishalbagi/Cucumber-API/releases/latest
+ARG MVND_DOWNLOAD_URL=https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip
 RUN curl -fsSL -o test.zip ${MVND_DOWNLOAD_URL} ; 
 #RUN git clone https://github.com/vishalbagi/Cucumber-API
 RUN mkdir -p /tmp/zip && unzip mvnd.zip -d /tmp/zip \
