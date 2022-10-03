@@ -8,9 +8,9 @@ RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip
 
 
 #RUN git clone https://github.com/vishalbagi/Cucumber-API
-RUN mkdir -p /tmp/zip && unzip mvnd.zip -d /tmp/zip \
+RUN mkdir -p /tmp/zip && unzip test.zip -d /tmp/zip \
     && mv /tmp/zip/`ls /tmp/zip | head -n 1` /tmp/test
-COPY --from=0 /tmp/mvnd /usr/local/mvnd    
+COPY --from=0 /tmp/test /usr/local/test    
 CMD ls
 CMD ls
 RUN cd Cucumber-API && mvn clean verify -Dcucumber.options="--tags @SBDB"
