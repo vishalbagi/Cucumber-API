@@ -5,6 +5,7 @@ RUN apt-get -y install unzip
 RUN mvn -version
 
 RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip -L -o test.zip
+CMD ls
 
 RUN mkdir -p /tmp/zip && unzip test.zip -d /tmp/zip \
     && mv /tmp/zip/`ls /tmp/zip | head -n 1` /tmp/test
