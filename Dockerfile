@@ -1,5 +1,6 @@
 FROM maven:3.6-jdk-8-slim
 RUN mvn -version
+RUN apk update && apk add git
 RUN git clone https://github.com/vishalbagi/Cucumber-API.git
 CMD ls
 CMD ls
