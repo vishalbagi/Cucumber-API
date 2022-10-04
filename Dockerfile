@@ -7,7 +7,7 @@ RUN mkdir -p /tmp/zip
 RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip -L -o latest.zip && unzip latest.zip 
 CMD ls
 
-cd latest
+RUN cd latest
 #RUN git clone https://github.com/vishalbagi/Cucumber-API
 CMD ls
 RUN cd Cucumber-API && mvn clean verify -Dcucumber.options="--tags @SBDB"
