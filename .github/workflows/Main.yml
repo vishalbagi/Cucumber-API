@@ -11,4 +11,4 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
     - name: Build docker images
-      run: docker build -t foo . && docker run -it foo
+      run: docker build -t foo . && docker run foo
