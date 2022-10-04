@@ -3,8 +3,8 @@ RUN apt-get -y update
 RUN apt-get -y install unzip
 #RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN mvn -version
-
-RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip -L -o test.zip
+RUN mkdir -p /tmp/zip 
+RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip -L -o tmp/test.zip
 CMD ls
 
 RUN mkdir -p /tmp/zip && unzip test.zip -d /tmp/zip \
