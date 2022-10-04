@@ -7,8 +7,7 @@ RUN mkdir -p /tmp/zip
 RUN curl https://github.com/vishalbagi/Cucumber-API/archive/refs/tags/latest.zip -L -o tmp/test.zip
 CMD ls
 
-RUN mkdir -p /tmp/zip && unzip test.zip -d /tmp/zip \
-    && mv /tmp/zip/`ls /tmp/zip | head -n 1` /tmp/test
+RUN mkdir -p /tmp/zip && unzip tmp/test.zip 
     
 #RUN git clone https://github.com/vishalbagi/Cucumber-API
 CMD ls
