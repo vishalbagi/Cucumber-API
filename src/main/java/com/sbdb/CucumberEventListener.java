@@ -16,7 +16,7 @@ public class CucumberEventListener implements ConcurrentEventListener {
     * */
 
     private EventHandler<TestRunStarted> testRunStarted = event -> {
-        RestAssured.baseURI = "https://ssd-api.jpl.nasa.gov/cad.api";
+     //   RestAssured.baseURI = "http://localhost:8888/services/auth/login/";
         System.out.println("Cucumber test run started");
     };
 

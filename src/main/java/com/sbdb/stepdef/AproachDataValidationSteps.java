@@ -8,6 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.json.simple.JSONObject;
 
 import java.util.List;
 import java.util.Map;
@@ -27,14 +28,20 @@ public class AproachDataValidationSteps {
 
     @When("^I close-approach data for asteroid with following filter$")
     public void i_closeapproach_data_for_asteroid_with_following_filter(DataTable table) {
-        RequestSpecification httpRequest = RestAssured.given();
         List<List<String>> data = table.asLists();
+        RestAssured.baseURI = "http://localhost:8888/services/auth/login/";
+
+        request = RestAssured.given();
+
+        JSONObject requestParams = new JSONObject();
+
 
         for(int i = 1; i < data.size(); i++) {
-            httpRequest.param(data.get(i).get(0), data.get(i).get(1));
+            requestParams.put(data.get(i).get(0), data.get(i).get(1));
         }
 
-        response = httpRequest.when().get();
+        response = request .accept(ContentType.JSON)
+                .contentType(ContentType.JSON) . body(requestParams).when().post("");
         response.then().log().all();
     }
 
